@@ -1,6 +1,6 @@
-# Mystery Mail Archive
+# Epstein Case Archive
 
-A mysterious archive application that generates and displays cryptic case files from the 1970s. Explore classified documents, witness statements, and evidence from unsolved investigations.
+A mysterious archive application that generates and displays cryptic case files from the Epstein investigation. Explore classified documents, witness statements, and evidence from the ongoing federal investigation.
 
 ![Banner](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
 
@@ -81,7 +81,7 @@ mystery-mail-archive/
 
 The application uses Google Gemini AI to:
 
-- **Generate Mystery Content**: Creates cryptic emails, police statements, and evidence reports based on random topics
+- **Generate Mystery Content**: Creates cryptic emails, police statements, and evidence reports based on the Epstein investigation
 - **Decrypt Redacted Text**: Provides chilling interpretations of redacted information
 - **Scene Reconstruction**: Generates visual prompts for video reconstructions of crime scenes
 

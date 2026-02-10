@@ -76,7 +76,7 @@ export const Cabinet: React.FC<CabinetProps> = ({
       </div>
 
       <div className="p-4 border-t border-white/5 bg-black/20 text-[9px] text-white/20 font-mono">
-        SYSTEM: DEPT-7_V6.4<br/>
+        SYSTEM: FBI_EPI-INV_V2.1<br/>
         STATUS: ACCESS_GRANTED
       </div>
     </div>

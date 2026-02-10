@@ -1,7 +1,7 @@
 
 {
-  "name": "Mystery Mail Archive",
-  "description": "A gritty, vintage-style mystery investigation interface where users can explore redacted files, spooky photos, and interactive case records powered by AI.",
+  "name": "Epstein Case Archive",
+  "description": "A gritty, vintage-style investigation interface for exploring classified documents, witness statements, and evidence from the Epstein case, powered by AI.",
   "requestFramePermissions": [
     "camera",
     "microphone"

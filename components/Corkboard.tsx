@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Corkboard: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <div className="flex-1 h-full bg-[#1a130f] p-8 relative overflow-hidden flex items-center justify-center">
       {/* Cork Texture */}
@@ -9,12 +11,18 @@ export const Corkboard: React.FC = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cork-board.png')] opacity-60"></div>
         
         {/* Evidence items */}
-        <div className="absolute top-10 right-10 rotate-3 transform p-1 bg-white shadow-xl hover:rotate-0 transition-transform cursor-pointer">
+        <div 
+          className="absolute top-10 right-10 rotate-3 transform p-1 bg-white shadow-xl hover:rotate-0 transition-transform cursor-pointer"
+          onClick={() => setSelectedImage('https://picsum.photos/seed/mystery1/800/1000?grayscale')}
+        >
           <img src="https://picsum.photos/seed/mystery1/150/200?grayscale" alt="Evidence" className="grayscale contrast-125" />
           <p className="text-[10px] mt-1 text-black font-bold text-center">EXHIBIT A</p>
         </div>
 
-        <div className="absolute top-40 left-10 -rotate-6 transform p-1 bg-white shadow-xl hover:rotate-0 transition-transform cursor-pointer">
+        <div 
+          className="absolute top-40 left-10 -rotate-6 transform p-1 bg-white shadow-xl hover:rotate-0 transition-transform cursor-pointer"
+          onClick={() => setSelectedImage('https://picsum.photos/seed/mystery2/800/800?grayscale')}
+        >
           <img src="https://picsum.photos/seed/mystery2/120/120?grayscale" alt="Evidence" className="grayscale brightness-50 contrast-150" />
           <p className="text-[10px] mt-1 text-black font-bold text-center">SIGHTING</p>
         </div>
@@ -42,6 +50,29 @@ export const Corkboard: React.FC = () => {
           </svg>
         </div>
       </div>
+
+      {/* Image Preview Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh]">
+            <img 
+              src={selectedImage} 
+              alt="Evidence Full Size" 
+              className="max-w-full max-h-[85vh] object-contain shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button 
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-4 -right-4 w-10 h-10 bg-red-900 text-white font-bold hover:bg-red-700 transition-all shadow-xl flex items-center justify-center"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
